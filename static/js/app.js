@@ -31,11 +31,12 @@ function buildCharts(sample) {
 
     // Filter the samples for the object with the desired sample number
     let filteredData = samples.filter(sampleObj => sampleObj.id == sample);
-
+    let result = filteredData[0];
+  
     // Get the otu_ids, otu_labels, and sample_values
-    let otu_ids = filteredData[0].otu_ids;
-    let otu_labels = filteredData[0].otu_labels;
-    let sample_values = filteredData[0].sample_values;
+    let otu_ids = result.otu_ids;
+    let otu_labels = result.otu_labels;
+    let sample_values = result.sample_values;  
 
     // Build a Bubble Chart
     let bubbleTrace = {
